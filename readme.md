@@ -32,8 +32,14 @@ $ npm install
 $ make test
 ```
 
+## Credits
+
+Core code is from a [web solver][] written by [David Binner][]
+
 ## License
 
-MIT
+Released with permission from the original author under the MIT license.
 
 [mathjs]: http://mathjs.org/
+[web solver]: http://www.akiti.ca/Quad4Deg.html
+[david binner]: http://www.akiti.ca/ContactPage.html
