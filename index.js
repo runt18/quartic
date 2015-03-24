@@ -1,5 +1,17 @@
 var math = require('mathjs');
 
+var round = function(num, places) {
+  var power = Math.pow(10, places);
+  return Math.round(num * power) / power;
+};
+
+math.type.Complex.prototype.round = function(places) {
+  this.re = round(this.re, places);
+  this.im = round(this.im, places);
+
+  return this;
+};
+
 function QuadSD_ak1(NN, u, v, p, q, iPar) {
     // Divides p by the quadratic 1, u, v placing the quotient in q and the remainder in a, b
     // iPar is a dummy variable for passing in the two parameters--a and b--by reference
